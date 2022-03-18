@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+   background: linear-gradient(#081F41, #072348, #0578D1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 70%;
+    margin-top: 1%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.563);
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    overflow: hidden;
+
+}
+
+
+.navBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin: 30px 0;
+}
+
+nav {
+    width: 100%;
+    text-align: right;
+}
+
+li {
+    margin-right: 30px;
+    font-weight: 500;
+    list-style-type: none;
+    display: inline-block;
+    margin: 8px;
+}
+
+.nav-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(1, 7, 99);
+    ;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: rgba(29, 128, 253, 1);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+
+}
+
+
+.column1 {
+    margin-left: 50px;
+    position: relative;
+}
+
+h2 {
+    font-size: 54px;
+}
+
+h3 {
+    font-size: 30px;
+    color: rgb(145, 143, 143);
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+
+.column1 p {
+    font-size: 16px;
+    color: #b7b7b7;
+    font-weight: 300;
+}
+
+
+.column1::before {
+    width: 10px;
+    content: "";
+    height: 57%;
+    background: linear-gradient(#081F41, #072348, #0578D1);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+
+h4 {
+    font-size: 20px;
+    color: black;
+    margin: 30px 0;
+}
+
+
+.buy {
+    width: 140px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.368);
+    z-index: 2;
+    background: linear-gradient(#081F41, #072348);
+    transition: 0.5s ease-in-out;
+   
+}
+
+
+.buy img {
+    width: 30px;
+    display: none;
+}
+
+.buy:hover {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    
+}
+
+.buy:hover img {
+    display: block;
+}
+
+
+.column2 {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.colorBox {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 80%;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.326);
+    border-radius: 20px 0 0 20px;
+    background: linear-gradient(#081F41, #072348, #0578D1);
+    z-index: 1;
+    transform: translateX(70px);
+}
+
+.add {
+    z-index: 2;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.add img {
+    height: 100%;
+    width: 100%;
+    max-width: 55px;
+}
+
+.controle {
+    z-index: 2;
+    width: 80%;
+    animation: controler 2s infinite alternate ease-in-out;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    margin: 14px;
+    height: 30px;
+}
+
+.facebook:hover {
+    background: #0161d9;
+    padding: 4px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.instagram:hover {
+    background: linear-gradient(#AA77C9, #F99677, #FEC386);
+    padding: 4px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.twitter:hover {
+    background: #00acee;
+    padding: 4px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.menubotao {
+    width: 25px;
+    margin-right: 15px;
+    display: none;
+}
+
+/* Midea Query */
+
+@media (max-width: 760px) {
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        overflow-y: auto;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    .colorBox {
+        transform: translateX(70px);
+    }
+
+    .column2 {
+        margin-bottom: 30px;
+    }
+
+    #menulist {
+        font-size: 12px;
+        position: relative;
+        top: 74px;
+        left: 48px;
+        overflow: hidden;
+        transition:  all 0.5s ease-in-out;
+    }
+
+    .menubotao {
+        cursor: pointer;
+        display: block;
+    }
+
+    .navli {
+        display: block;
+    }
+}
+
+
+
+@keyframes controler {
+    from { transform: translate(-5%, -5%) rotate(-5deg);
+    }
+}
+
+
+/* 
+.controle {
+    max-width: 100%px;
+    transform: translateY((0px));
+    animation: controle 5s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes controle {
+    0% { transform: translateY(0px);
+    }
+    50% { transform: translateY(-30px);
+    }
+    100% { transform: translateY(0px);
+    }
+} */
+
